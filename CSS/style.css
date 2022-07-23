@@ -1,0 +1,57 @@
+:root{
+    --orange: #FCA345; 
+    --yellow: #FFFC9C;
+    --select_orange: #FD8F1A;
+    --blue: #5868D3;
+    --disable-gray: #DBDBDB;
+    --black: #0000;
+    --white: #FDFEFD;
+}
+body{
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+}
+.top {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--orange);
+    color: var(--white);
+    padding: 0 24px;
+    width: 100%;
+    text-align: center;
+}
+.logo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 8px;
+}
+.logo img{
+    width: 6rem;
+    height: 6rem;
+    object-fit: cover;
+    border-radius: 50%;
+}
+.logo figcaption{
+    font-size: large;
+    font-weight: bold;
+    padding-bottom: 0;
+}
+.menu{
+    display: flex;
+    padding: 3rem 0 0 0;
+    padding-right: 0;
+    margin: 0;
+}
+.menu li{
+    list-style: none;
+    font-size: x-large;
+    font-weight: bold;
+    padding: 1rem 2rem 1rem 2rem;
+    margin: 0;
+    border-left: 3px solid var(--white);
+    height: min-content;
+}
+.menu li:last-child{
+    margin-right: 1rem;
+}
