@@ -37,21 +37,78 @@ body{
     font-weight: bold;
     padding-bottom: 0;
 }
+.logo img:hover, .logo figcaption:hover{
+    cursor: pointer;
+}
 .menu{
     display: flex;
     padding: 3rem 0 0 0;
-    padding-right: 0;
     margin: 0;
+}
+.menu hr{
+    margin: 0 0 25px 0;
+    padding: 0;
+    width: 1px;
+    border-style: solid;
+    color: var(--white);
+    background-color: var(--white);
 }
 .menu li{
     list-style: none;
     font-size: x-large;
     font-weight: bold;
-    padding: 1rem 2rem 1rem 2rem;
-    margin: 0;
-    border-left: 3px solid var(--white);
+    padding: 1rem 1rem 1rem 1rem;
+    margin: 0 1rem 0 1rem;
     height: min-content;
+    border-radius: 20px;
+    transition: ease-out .5s;
+}
+.menu li:nth-child(2){
+    background-color: var(--select_orange);
+}
+.menu li:hover{
+    background-color: var(--select_orange);
+    cursor: pointer;
 }
 .menu li:last-child{
-    margin-right: 1rem;
+    margin-right: 2rem;
+}
+
+/*-------------------------------------------*/
+
+.slider{
+    display: flex;
+    justify-content: center;
+    background-color: var(--disable-gray);
+    text-align: center;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    margin-left: 15rem;
+    margin-right: 15rem;
+    padding: 5rem;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+}
+.slider div{
+    flex: 0 0 100%;
+    width: 100%;
+    object-fit: cover;
+    scroll-snap-align: center;
+}
+.blocks{
+    display: grid;
+    background-color: var(--disable-gray);
+    width: 15rem;
+    height: 15rem;
+    margin: 5rem;
+    position: absolute;
+}
+.img p{
+    text-align: center;
+}
+.info{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--yellow);
+    position: relative;
 }
