@@ -8,9 +8,12 @@
     --white: #FDFEFD;
 }
 body{
+    padding: 0;
     margin: 0;
     font-family: 'Inter', sans-serif;
 }
+/*--------------------Header content-----------------------*/
+/* nav container */
 .top {
     display: flex;
     justify-content: space-between;
@@ -20,6 +23,7 @@ body{
     width: 100%;
     text-align: center;
 }
+/* Logo cotainer */
 .logo{
     display: flex;
     flex-direction: column;
@@ -40,14 +44,18 @@ body{
 .logo img:hover, .logo figcaption:hover{
     cursor: pointer;
 }
+/* Menu container */
 .menu{
     display: flex;
-    padding: 3rem 0 0 0;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0;
     margin: 0;
 }
 .menu hr{
-    margin: 0 0 25px 0;
+    margin: 0;
     padding: 0;
+    height: 3rem;
     width: 1px;
     border-style: solid;
     color: var(--white);
@@ -74,8 +82,8 @@ body{
     margin-right: 2rem;
 }
 
-/*-------------------------------------------*/
-
+/*--------------------Main content-----------------------*/
+/* Slider */
 .slider{
     display: flex;
     justify-content: center;
@@ -95,20 +103,88 @@ body{
     object-fit: cover;
     scroll-snap-align: center;
 }
+/* Content below slider */
 .blocks{
-    display: grid;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+/* filer */
+.filter{
+    padding: 0;
+    margin: 0 2rem;
+    height: min-content;
+}
+.filter li{
+    text-align: center;
+    list-style: none;
+    background-color: var(--disable-gray);
+    border-radius: 20px;
+    padding: .5rem;
+    width: 10rem;
+    margin: .5rem 0;
+    transition: ease-in .2s;
+}
+.filter li:first-child{
+    color: var(--white);
+    background-color: var(--orange); 
+}
+.filter li:hover{
+    color: var(--white);
+    background-color: var(--orange);
+    cursor: pointer;
+}
+.filter li:first-child:hover{
+    cursor: default;
+}
+/* squares */
+.products{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 0;
+}
+/* marc */
+.container{
     background-color: var(--disable-gray);
     width: 15rem;
     height: 15rem;
-    margin: 5rem;
-    position: absolute;
+    margin: 2.5rem;
+    position: relative;
 }
-.img p{
-    text-align: center;
+/* Image */
+.container img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    cursor: pointer;
 }
+.container img:hover ~ div{
+    opacity: 100%;
+}
+/* Info square *Name *Price */
 .info{
     display: flex;
     flex-direction: column;
+    justify-content: space-evenly;
     background-color: var(--yellow);
-    position: relative;
+    position: absolute;
+    font-size: large;
+    
+    width: 100%;
+    height: 4rem;
+    bottom: 0;
+    opacity: 0%;
+    transition: ease-in-out .5s;
+}
+.info p{
+    margin: 0 1rem;
+
+}
+.info:hover{
+    opacity: 100%;
+    cursor: pointer;
+}
+.info p:nth-child(1){
+    font-weight: bold;
 }
